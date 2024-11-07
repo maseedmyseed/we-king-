@@ -1,3 +1,21 @@
+<a href="https://www.maseedweek.com" target="_blank">Click here to visit Example</a><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekday Display</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Today is:</h1>
+  <p id="dayMessage">Loading...</p>
+
+  <!-- Add a link below the text -->
+  <p>Want to learn more? <a href="https://www.example.com" target="_blank">Visit Example</a></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,4 +154,81 @@ const today = new Date().getDay();
 const dayMessage = document.getElementById("dayMessage");
 
 // Display the current day and message
-dayMessage.textContent = `It's ${daysOfWeek[today]} - ${messages[today]}`;
+dayMessage.textContent = `It's ${daysOfWeek[today]} - ${messages[today]}`;/* styles.css */
+
+/* Animated Gradient Background */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite; /* Background animation */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Keyframes for animated gradient background */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Text Fade-in Animation */
+h1, #dayMessage {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  animation: fadeIn 2s forwards; /* Apply the fade-in animation */
+}
+
+/* Keyframes for fading in text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Optional styling for the text */
+h1 {
+  margin-top: 50px;
+}
+
+#dayMessage {
+  font-size: 1.5em;
+  margin-top: 20px;
+}/* Animated Gradient Background */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1, #dayMessage {
+  background-color: rgba(0, 0, 0
